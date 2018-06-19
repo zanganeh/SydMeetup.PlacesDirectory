@@ -1,0 +1,15 @@
+﻿@model MenuIItemBlock
+@using EPiServer.Core
+
+<!-- Single Listing Menu -->
+<div class="single-listing-menu d-flex justify-content-between">
+    <!-- Listing Menu Title -->
+    <div class="listing-menu-title">
+        <h6>@(((IContent)Model).Name)</h6>
+        <p>@Html.PropertyFor(model => model.Description)</p>
+    </div>
+    <!-- Listing Menu Price -->
+    <div class="listing-menu-price">
+        <h6>$@Html.PropertyFor(model => model.Price)</h6>
+    </div>
+</div>

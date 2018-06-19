@@ -2,7 +2,7 @@
 using EPiServer;
 using EPiServer.Core;
 
-namespace SydMeetup.PlacesDirectory.Models.ViewModel
+namespace SydMeetup.PlacesDirectory.Models.ViewModels
 {
     public class ContentRenderingErrorModel
     {

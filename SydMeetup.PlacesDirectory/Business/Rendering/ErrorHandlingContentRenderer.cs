@@ -6,7 +6,7 @@ using System.Web.Mvc.Html;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.Security;
-using SydMeetup.PlacesDirectory.Models.ViewModel;
+using SydMeetup.PlacesDirectory.Models.ViewModels;
 using EPiServer.Web.Mvc;
 
 
