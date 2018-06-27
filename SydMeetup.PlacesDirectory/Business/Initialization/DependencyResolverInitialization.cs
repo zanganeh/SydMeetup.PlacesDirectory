@@ -5,6 +5,10 @@ using EPiServer.ServiceLocation;
 using SydMeetup.PlacesDirectory.Business.Rendering;
 using EPiServer.Web.Mvc;
 using EPiServer.Web.Mvc.Html;
+using EPiServer.ContentApi.Infrastructure;
+using EPiServer.ContentApi.Search.Infrastructure;
+using System.Web.Http;
+using SydMeetup.PlacesDirectory.Infrastructure.WebApi;
 
 namespace SydMeetup.PlacesDirectory.Business.Initialization
 {
@@ -21,6 +25,17 @@ namespace SydMeetup.PlacesDirectory.Business.Initialization
                 context.Services.AddTransient<IContentRenderer, ErrorHandlingContentRenderer>()
                     .AddTransient<ContentAreaRenderer, CustomContentAreaRenderer>();
             };
+
+            context.InitializeContentApi();
+            context.InitializeContentSearchApi();
+
+            GlobalConfiguration.Configure(config =>
+            {
+                //Other config settings may already be here, but ensure these are added:
+                config.DependencyResolver = new StructureMapResolver(context.StructureMap());
+                config.MapHttpAttributeRoutes();
+                config.EnableCors();
+            });
         }
 
         public void Initialize(InitializationEngine context)
