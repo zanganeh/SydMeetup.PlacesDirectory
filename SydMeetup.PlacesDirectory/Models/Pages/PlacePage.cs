@@ -9,8 +9,9 @@ namespace SydMeetup.PlacesDirectory.Models.Pages
 {
     [ContentType(DisplayName = "Place", GUID = "dc8d93b8-817e-4feb-ad22-2b43485a3e4e", Description = "Place detail page")]
     [SiteImageUrl("~/Static/gfx/page-type-place.png")]
-    public class PlacePage : SitePageData
+    public class PlacePage : PageData
     {
+
         [UIHint(UIHint.Textarea)]
         public virtual string Address { get; set; }
 
@@ -18,5 +19,7 @@ namespace SydMeetup.PlacesDirectory.Models.Pages
 
         [AllowedTypes(typeof(MenuIItemBlock))]
         public virtual ContentArea MenuItems { get; set; }
+
+        public virtual double MinMenuPrice { get; set; }
     }
 }
