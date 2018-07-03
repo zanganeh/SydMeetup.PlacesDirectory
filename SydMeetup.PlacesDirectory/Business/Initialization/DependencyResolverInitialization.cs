@@ -9,6 +9,7 @@ using EPiServer.ContentApi.Infrastructure;
 using EPiServer.ContentApi.Search.Infrastructure;
 using System.Web.Http;
 using SydMeetup.PlacesDirectory.Infrastructure.WebApi;
+using Newtonsoft.Json;
 
 namespace SydMeetup.PlacesDirectory.Business.Initialization
 {
@@ -32,6 +33,9 @@ namespace SydMeetup.PlacesDirectory.Business.Initialization
             GlobalConfiguration.Configure(config =>
             {
                 //Other config settings may already be here, but ensure these are added:
+                config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.LocalOnly;
+                config.Formatters.JsonFormatter.SerializerSettings = new JsonSerializerSettings();
+                config.Formatters.XmlFormatter.UseXmlSerializer = true;
                 config.DependencyResolver = new StructureMapResolver(context.StructureMap());
                 config.MapHttpAttributeRoutes();
                 config.EnableCors();

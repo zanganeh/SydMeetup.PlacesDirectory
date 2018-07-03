@@ -20,6 +20,9 @@ namespace SydMeetup.PlacesDirectory.Models.Pages
         [AllowedTypes(typeof(MenuIItemBlock))]
         public virtual ContentArea MenuItems { get; set; }
 
+        [UIHint(UIHint.Textarea)]
+        public virtual string TradingHours { get; set; }
+
         public virtual double MinMenuPrice { get; set; }
     }
 }
