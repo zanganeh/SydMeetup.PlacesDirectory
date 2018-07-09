@@ -468,6 +468,7 @@
     <Content Include="Static\fonts\Pe-icon-7-stroke.woff" />
     <Content Include="Views\Shared\Blocks\MenuIItemBlock.cshtml" />
     <Content Include="Views\ExplorePage\Index.cshtml" />
+    <Content Include="Views\StartPage\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
