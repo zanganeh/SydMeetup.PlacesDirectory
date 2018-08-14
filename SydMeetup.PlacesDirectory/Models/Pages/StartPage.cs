@@ -7,5 +7,6 @@ namespace SydMeetup.PlacesDirectory.Models.Pages
     [SiteImageUrl("~/Static/gfx/page-type-start.png")]
     public class StartPage : SitePageData
     {
+        public virtual string GoogleApiKey { get; set; }
     }
 }

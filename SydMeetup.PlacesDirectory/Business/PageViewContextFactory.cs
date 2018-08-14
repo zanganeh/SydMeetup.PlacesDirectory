@@ -41,7 +41,8 @@ namespace SydMeetup.PlacesDirectory.Business
 
             return new LayoutModel
             {
-                IsInReadonlyMode = _databaseMode.DatabaseMode == DatabaseMode.ReadOnly
+                IsInReadonlyMode = _databaseMode.DatabaseMode == DatabaseMode.ReadOnly,
+                GoogleApiKey = startPage.GoogleApiKey
             };
         }
 

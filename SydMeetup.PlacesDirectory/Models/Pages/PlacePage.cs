@@ -9,7 +9,7 @@ namespace SydMeetup.PlacesDirectory.Models.Pages
 {
     [ContentType(DisplayName = "Place", GUID = "dc8d93b8-817e-4feb-ad22-2b43485a3e4e", Description = "Place detail page")]
     [SiteImageUrl("~/Static/gfx/page-type-place.png")]
-    public class PlacePage : PageData
+    public class PlacePage : SitePageData
     {
 
         [UIHint(UIHint.Textarea)]

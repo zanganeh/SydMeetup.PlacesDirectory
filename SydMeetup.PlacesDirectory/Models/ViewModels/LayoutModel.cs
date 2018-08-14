@@ -10,6 +10,9 @@ namespace SydMeetup.PlacesDirectory.Models.ViewModels
         public bool HideFooter { get; set; }
         public bool LoggedIn { get; set; }
 
+
+        public string GoogleApiKey { get; set; }
+
         public bool IsInReadonlyMode { get; set; }
     }
 }

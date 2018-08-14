@@ -339,6 +339,7 @@
     <Compile Include="Business\Rendering\TemplateCoordinator.cs" />
     <Compile Include="Business\ServiceLocatorDependencyResolver.cs" />
     <Compile Include="Controllers\DefaultPageController.cs" />
+    <Compile Include="Controllers\ExplorePageController.cs" />
     <Compile Include="Controllers\PageControllerBase.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Global.asax.cs">
@@ -357,6 +358,7 @@
     <Compile Include="Models\Register\RegisterViewModel.cs" />
     <Compile Include="Models\SiteImageUrlAttribute.cs" />
     <Compile Include="Models\ViewModels\ContentRenderingErrorModel.cs" />
+    <Compile Include="Models\ViewModels\ExplorePageViewModel.cs" />
     <Compile Include="Models\ViewModels\IPageViewModel.cs" />
     <Compile Include="Models\ViewModels\LayoutModel.cs" />
     <Compile Include="Models\ViewModels\PageViewModel.cs" />
@@ -442,7 +444,9 @@
     <Content Include="Static\js\others\plugins.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\GeoLiteCity.dat" />
     <None Include="EPiServerLog.config" />
     <Content Include="modules\_protected\EPiServer.Cms.TinyMce\web.config" />
